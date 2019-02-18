@@ -1,0 +1,22 @@
+{
+  "name": "node-mongo",
+  "version": "1.0.0",
+  "description": "my test node with mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulfnb/node-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wulfnb/node-mongo/issues"
+  },
+  "homepage": "https://github.com/wulfnb/node-mongo#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
