@@ -5,6 +5,11 @@ const aboutPage = fs.readFileSync('about.html')
 const contactPage = fs.readFileSync('contact.html')
 const homePage = fs.readFileSync('home.html')
 
+// asynchrones process
+// const homePage = fs.readFile('home.html',(file) => {
+
+// })
+
 const server = http.createServer((request,response) =>{
     console.log(request.url)
     if (request.url === '/'){
