@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 
 const app = express()
@@ -8,7 +9,15 @@ app.get('/',(request, response) => {
 app.get('/test', (request, response) => {
     response.send({ "type": "Send test" })
 })
-
+app.get('/send', (request, response) => {
+    response.sendFile(path.resolve(__dirname,'home.html'))
+})
+app.get('/about', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'about.html'))
+})
+app.get('/contact', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'contact.html'))
+})
 app.listen(3000)
 
 
