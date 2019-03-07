@@ -1,8 +1,12 @@
 const path = require('path')
 const expressEdge = require('express-edge')
 const express = require('express')
+const mongoose = require('mongoose')
 
 const app = express()
+
+// database
+mongoose.connect('mongodb://localhost/node-js-blog')
 
 // static files directory
 app.use(express.static('public'))
