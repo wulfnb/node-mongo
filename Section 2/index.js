@@ -26,9 +26,17 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 // ######## URL's ########
 
-app.get('/',(req, res) =>{
-    // res.sendFile(path.resolve(__dirname, 'pages/index.html'))
-    res.render('index')
+// app.get('/',(req, res) =>{
+//     // res.sendFile(path.resolve(__dirname, 'pages/index.html'))
+//     res.render('index')
+// })
+
+app.get('/', async (req, res) => {
+    const posts = await Post.find({})
+    console.log(posts)
+    res.render('index',{
+        posts
+    })
 })
 
 app.get('/posts/new', (req, res) => {
