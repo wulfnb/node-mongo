@@ -19,3 +19,9 @@ Post.find({}, (error, posts) => {
 Post.findById('5c822db86e84de01fbf8f9ae', (error, post) => {
     console.log(error, post)
 })
+
+Post.findByIdAndUpdate('5c822db86e84de01fbf8f9ae', {
+    title : 'My first blog title Update'
+}, (error, post) => {
+    console.log('updated')
+})
